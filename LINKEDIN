@@ -1,0 +1,30 @@
+# Build in Public: EduAgent 🚀
+
+**Headline:** Stop Tutorial Hell. Start Learning with an Agent. 🤖🎓
+
+I just built **EduAgent**, a personalized learning platform that creates hyper-efficient study paths! 
+
+**The Problem:** 
+Most online courses are rigid. If you know "Basics of Programming", why watch 10 hours of "What is a Variable?" again?
+
+**The Solution:**
+EduAgent uses a **"ScaleDown"** algorithm to:
+1.  **Analyze** your current skill gap (e.g., "I know HTML, teach me React").
+2.  **Compress** 14,000+ course options into a lean, mean learning path.
+3.  **Simulate** your career trajectory (New Feature!).
+
+**🔥 Key Features:**
+*   **Career Time Machine**: Interactive slider to see how studying 10h vs 30h/week impacts your "Salary Unlock Date". 💸
+*   **AI Companion**: A chat widget that guides your journey.
+*   **Smart Filtering**: Automatically hides prerequisites you've already mastered.
+
+**🛠️ Tech Stack:**
+*   React 19 + Vite 7
+*   Agentic Logic (Mocked for Prototype)
+*   Vanilla CSS (Glassmorphism & Dark Mode)
+
+This project taught me how to think about **educational ROI**—treating learning time as an investment to be optimized.
+
+Check out the demo below! 👇
+
+#buildinpublic #react #vite #edtech #ai #coding #webdevelopment #learning
