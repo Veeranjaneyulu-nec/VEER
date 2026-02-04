@@ -1,0 +1,72 @@
+Implementation Plan - Educational Agent
+Goal Description
+Build a personalized learning path agent that integrates with course platforms, analyzes skill gaps, and optimizes learning paths using a "ScaleDown" methodology to compress content and personalize recommendations.
+
+User Review Required
+IMPORTANT
+
+"ScaleDown" is interpreted as a custom algorithmic component that filters and aggregates course content to reduce "noise" for the learner. I will mock the "compression" aspect by filtering metadata.
+
+Proposed Changes
+Core Architecture
+The system will be a React-based SPA (Single Page Application) with a local service layer (simulating backend/agents).
+
+[NEW] 
+EduAgent
+Root directory for the web application.
+Data Layer (Mock)
+[NEW] 
+services/courseContent.js
+Mocks APIs for Coursera/Udemy.
+Returns large datasets of raw course data.
+scaleDown Module
+[NEW] 
+agents/ScaleDown.js
+Compression Logic: Reduces raw course objects to essential metadata (Title, Skills, Difficulty, Duration).
+Personalization: Filters catalog based on learner profile (removes irrelevant/too easy/too hard courses).
+Agents
+[NEW] 
+agents/SkillGapAnalyzer.js
+Compares CurrentSkills vs TargetRole.
+Outputs MissingSkills with priority weights.
+[NEW] 
+agents/PathOptimizer.js
+Takes MissingSkills and CompressedCatalog (from ScaleDown).
+Generates an ordered list of courses (The Path).
+Respects prerequisites and time constraints.
+[NEW] 
+agents/PeerMatcher.js
+Matches learners with similar paths/schedules for study groups.
+UI Components
+[NEW] 
+components/Dashboard.jsx
+Integrated view with AI enhancements.
+[NEW] 
+components/AIAssistant.jsx
+AI Chat/Insight widget providing real-time feedback on learning path.
+[NEW] 
+components/MarketInsights.jsx
+Visualizes salary data and job demand for the target role.
+[NEW] 
+components/CareerSimulator.jsx
+Unique Feature: Interactive slider to adjust study hours/week.
+Visualizes the "Time Machine": How study intensity impacts completion date and potential salary growth.
+[NEW] 
+components/PathVisualizer.jsx
+Displays the learning path (Timeline/Graph view).
+Interactive "Start Course" buttons.
+[NEW] 
+components/SkillChart.jsx
+Visualizes skill gaps.
+Verification Plan
+Automated Tests
+Unit tests for 
+ScaleDown.js
+ to verify compression ratio (aim for ~75% JSON size reduction).
+Unit tests for 
+PathOptimizer.js
+ to ensure prerequisites are met.
+Manual Verification
+Run the web app.
+Input a user profile (e.g., "Beginner Developer" wanting to be "Full Stack").
+Verify the generated path makes sense and comes from the "integrated" platforms.
